@@ -16,6 +16,17 @@
     2. Un-do operation in text editor
     3. Parenthesis balence check used in compiler
 
+    Limitation:
+    1. Overflow of array size - It can be handled by creating a new array, twice the size of
+       original array then copy the element of orinal array to newly created array then free
+       the memory of original array.
+       cost of copying the original array is O(n)
+
+       Time complexity of Push in this case;
+       O(n) - in worst case (if the array get exhausted)
+       O(1) - when array size is not exhausted
+       O(1) - in average case
+
 """
 
 
