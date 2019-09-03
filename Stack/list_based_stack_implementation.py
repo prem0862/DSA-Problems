@@ -11,6 +11,11 @@
     3. length of the stack
     4. check if stack is empty or not?
 
+    Application:
+    1. Function calls / resursion (remember stack frame used in dynamic memory allocation)
+    2. Un-do operation in text editor
+    3. Parenthesis balence check used in compiler
+
 """
 
 
