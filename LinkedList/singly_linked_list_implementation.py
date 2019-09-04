@@ -66,7 +66,7 @@ class Linkedlist:
 
     # size of linked list
     def linked_list_size(self):
-        count = 1
+        count = 0
         current_ref = self.head
         while current_ref != None:
             count += 1
