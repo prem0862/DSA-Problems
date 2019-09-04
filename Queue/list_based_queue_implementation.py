@@ -5,6 +5,9 @@
     in a queue for the movie tickets, the first one to stand in line is the first one to buy a 
     ticket and enjoy the movie.
 
+    Queue is a list or collection with restriction that insertion can be only perform at one end (rear)
+    and deletion can be performed at other end (front).
+
 
     Implement the following functions for the queue;
     1. Enqueue - add the element at the end of
