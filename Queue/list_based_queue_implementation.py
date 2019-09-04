@@ -11,6 +11,12 @@
     2. Dequeue - remove the element from the begningof the queue
     3. size - size of the queue
 
+    Applications:
+    1. Network Printer - (Program manager puts request in a queue as long as someting printing on
+       the printer)
+    2. Process schduling
+    3. Simulating wait
+
 """
 
 
