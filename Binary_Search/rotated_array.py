@@ -7,13 +7,27 @@ class Solution:
     # @param A : tuple of integers
     # @return an integer
     def findMin(self, A):
-        min_index = 0
-        array_size = len(A)
-        # scan through the array and find the index of min element
-        for index in range(1, array_size):
-            if A[index] < A[min_index]:
-                min_index = index
+        n = len(A)
+        low = 0
+        high = n -1
         
-        min_element = A[min_index]
-        return min_element
+        while(low <= high):
             
+            if A[low] <= A[high]:
+                # true if arry is linearly sorted
+                return A[low]
+            
+            mid = (low + high)//2
+            next_ind = (mid +1) % n
+            prev = (mid -1 + n) % n
+            
+            if A[mid] <= A[prev] and A[next_ind] >= A[mid]:
+                #  condition for minimum element
+                return A[mid]
+            elif A[mid] >= A[low]:
+                # so min element can't be in left part
+                low = mid +1
+            elif A[mid] <= A[high]:
+                # so min element can't be in right half part
+                high = mid -1
+                 
