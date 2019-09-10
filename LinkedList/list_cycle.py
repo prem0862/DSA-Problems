@@ -1,6 +1,9 @@
 
 # Problem: https://www.interviewbit.com/problems/list-cycle/
 
+# Solution: https://leetcode.com/problems/linked-list-cycle/solution/
+# Solution: https://www.geeksforgeeks.org/detect-loop-in-a-linked-list/
+
 
 
 # Definition for singly-linked list.
@@ -24,5 +27,4 @@ class Solution:
             current = current.next
         
         return None
-      
-        
+
