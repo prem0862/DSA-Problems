@@ -89,4 +89,51 @@ class DoublyLinkedList:
     def insert_after_item(self, item):
         pass
 
+    # delete element from start
+    def delete_start_element(self):
+        if self.head is None:
+            print("linked list is empty")
+            return
+        else:
+            self.head = self.head.next
+            self.head.prev = None
 
+    # delete element from end
+    def delete_end_element(self):
+        if self.head is None:
+            print("linked list is empty")
+            return
+        else:
+            current = self.head
+            while current:
+                current = current.next
+            current.prev.next = None
+            current.prev = None
+
+            
+
+    # delete element by value
+    def delete_by_value(self, item):
+        if self.head is None:
+            print("linked list is empty")
+            return
+        else:
+            current = self.head
+            while current:
+                if current.val == item:
+                    break
+                current = current.next
+
+            # if it is last node of linked list
+            if current.next is None:
+                current.next.prev = None
+                current.next = None
+                return
+
+            # if item is in between the list
+            current.prev.next = current.next
+            current.next.prev = current.prev
+
+
+
+linked_list = DoublyLinkedList()
